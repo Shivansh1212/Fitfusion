@@ -7,71 +7,41 @@ const Registration = () => {
   const [loading, setLoading] = useState(false);
   return (
     <div className="w-full flex flex-col items-center bg-slate-900 h-screen ">
-      {/* {otpSent ? (
-        <>
-          <h1 className="text-xl font-bold">Sign Up</h1>
-          <div class="p-2 w-full md:w-1/2">
-            <div class="relative">
-              <label for="message" class="leading-7 text-sm text-gray-300">
-                OTP
-              </label>
-              <input
-                // value={OTP}
-                // onChange={(e) => setOTP(e.target.value)}
-                class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500  focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              />
-            </div>
-          </div>
-          <button
-            // onClick={verifyOTP}
-            className="flex mx-auto text-white bg-green-600 border-0 py-2 px-8 focus:outline-none hover:bg-green-700 rounded text-lg mt-4"
-          >
-            {loading ? <TailSpin height={25} color="white" /> : "Submit OTP"}
-          </button>
-        </>
-      ) : ( */}
       <>
         <h1 className="text-xl font-bold mt-8 text-white">Sign Up</h1>
-        <div class="p-2 w-full md:w-1/2">
+        <div class="p-2 w-1/2 md:w-1/2">
           <div class="relative">
             <label for="message" class="leading-7 text-sm text-gray-300">
               Name
             </label>
             <input
-              // value={form.name}
-              // onChange={(e) => setForm({ ...form, name: e.target.value })}
               class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500  focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
         </div>
-        <div className="p-2 w-full md:w-1/2">
+        <div className="p-2 w-1/2 md:w-1/2">
           <div class="relative">
             <label for="message" class="leading-7 text-sm text-gray-300">
               Mobile No.
             </label>
             <input
               type="number"
-              // value={form.mobile}
-              // onChange={(e) => setForm({ ...form, mobile: e.target.value })}
               class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500  focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
         </div>
-        <div className="p-2 w-full md:w-1/2">
+        <div className="p-2 w-1/2 md:w-1/2">
           <div class="relative">
             <label for="message" class="leading-7 text-sm text-gray-300">
               Password
             </label>
             <input
               type="password"
-              // value={form.password}
-              // onChange={(e) => setForm({ ...form, password: e.target.value })}
               class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500  focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
         </div>
         <button
-          // onClick={requestOtp}
           class="flex mx-auto text-white bg-green-600 border-0 py-2 px-8 focus:outline-none hover:bg-green-700 rounded text-lg mt-4"
         >
           {loading ? <TailSpin height={25} color="white" /> : "Request OTP"}

@@ -18,10 +18,7 @@ const Dropdown = () => {
 
   return (
     <div className="relative">
-      <div
-        className="flex items-center cursor-pointer"
-        onClick={handleToggle}
-      >
+      <div className="flex items-center cursor-pointer" onClick={handleToggle}>
         <FaAngleDown size={15} className="text-gray-400" />
         <span className="capitalize pr-6 pl-2 text-gray-400 md:text-base text-4xl">
           Workout
@@ -44,7 +41,6 @@ const Dropdown = () => {
     </div>
   );
 };
-
 
 const Header = () => {
   const navigate = useNavigate();
@@ -74,8 +70,16 @@ const Header = () => {
   ];
 
   return (
-    <div className="sticky z-10 top-0 bg-black text-3xl flex p-3 border-b-2 border-gray-500 justify-between">
-      <img src={fitfusion} alt="FitFusion Logo" className="w-12 h-12 rounded-md" />
+    <div className="sticky z-20 top-0 bg-black text-3xl flex p-3 border-b-2 border-gray-500 justify-between">
+      <div className="flex items-center">
+        <img
+          src={fitfusion}
+          alt="FitFusion Logo"
+          className="w-12 h-12 rounded-md"
+        />
+        <h1 className="text-2xl font-bold text-white ml-2">FitFusion</h1>{" "}
+        {/* Adjusted margin */}
+      </div>
 
       <h1 className="text-lg text-white md:flex items-center ml-auto hidden font-medium">
         {links.map(({ id, link, dropdown }) => (
@@ -127,7 +131,7 @@ const Header = () => {
           ))}
           <div className="absolute top-0 right-0 m-4">
             <button onClick={() => updateNav()}>
-              <FaTimes size={30} />
+              <FaTimes size={30} color="red" />
             </button>
           </div>
         </ul>

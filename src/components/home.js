@@ -1,56 +1,111 @@
 import React from "react";
 import bg_img from "../images/bg_img.jpg";
-
-const FeatureCard = ({ icon, title, description }) => (
-  <div className="p-4 md:w-1/3">
-    <div className="bg-white dark:bg-gray-800 border-2 border-gray-300 p-6 rounded-lg shadow-md">
-      <div className="flex-shrink-0 mx-auto mb-6">{icon}</div>
-      <h2 className="text-xl font-semibold title-font mb-2 text-gray-800 dark:text-white">
-        {title}
-      </h2>
-      <p className="leading-relaxed text-gray-600 dark:text-gray-300">
-        {description}
-      </p>
-    </div>
-  </div>
-);
+import { FaAngleDown } from "react-icons/fa";
+import { IoIosBody } from "react-icons/io";
+import { GrYoga } from "react-icons/gr";
+import { PiBowlFoodFill } from "react-icons/pi";
+import { TbDeviceAnalytics } from "react-icons/tb";
 
 const HomePage = () => {
   return (
-    <div className="bg-gray-900 text-white min-h-screen">
-      <img src={bg_img} alt="background home" className="w-full h-fit brightness-75 blur-sm"/>
-      <div className="relative container mx-auto p-8">
-        <header className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">FitFusion</h1>
-          <p className="text-gray-400">
-            Achieve your fitness goals with our personalized training programs.
+    <div>
+      <div className="relative bg-gray-900 text-white">
+        <img
+          src={bg_img}
+          alt="background home"
+          className="absolute w-full h-full object-cover brightness-50 blur-sm"
+        />
+        <div className=" relative z-10 md:p-40 ml-16 md:ml-0 pt-32 mr-16 pb-10">
+          <p className="text-3xl md:text-4xl py-1 font-home">SWEAT, ACHIEVE</p>
+          <p className="text-3xl md:text-4xl  py-1 font-home">
+            REPEAT, SUCCEED!
           </p>
-        </header>
-        <div className="flex flex-wrap -m-4">
-          <FeatureCard
-            icon={<i className="fas fa-dumbbell text-4xl text-blue-500" />}
-            title="Personalized Workouts"
-            description="Get custom workout plans tailored to your fitness level and goals."
-          />
-          <FeatureCard
-            icon={<i className="fas fa-heartbeat text-4xl text-red-500" />}
-            title="Health Tracking"
-            description="Monitor your progress and track key health metrics effortlessly."
-          />
-          <FeatureCard
-            icon={<i className="fas fa-chart-line text-4xl text-green-500" />}
-            title="Performance Analytics"
-            description="Visualize your performance with insightful analytics and charts."
-          />
+          <p className=" text-gray-200 py-4 text-justify font font-home">
+            Welcome to FitFusion, your premier destination for yoga and fitness
+            enthusiasts. Here, we strive to cultivate a sanctuary where the
+            harmony of mind, body, and spirit intertwines seamlessly. Get ready
+            to unleash your potential and awaken your senses. Welcome to
+            FitFusion, where wellness meets wonder, and every step brings you
+            closer to your best self.
+          </p>
+          <p className=" text-gray-200 py-4 text-justify font-home">
+            Whether you're a seasoned yogi, a fitness enthusiast, or someone
+            just beginning their journey to a healthier lifestyle, FitFusion has
+            something for everyone. From energizing yoga flows to heart-pumping
+            HIIT workouts, soothing meditation sessions to nutritional guidance,
+            our platform is your one-stop-shop for holistic wellness.
+          </p>
+          <div className="mt-6 flex items-center md:text-base text-sm">
+            <button className="bg-gray-800 border border-gray-400 rounded-md px-3 py-2 font-semibold ">
+              Get started
+            </button>
+            <div className="mx-10 cursor-pointer font-semibold flex items-center">
+              Our services
+              <div className="pt-1 pl-1">
+                <FaAngleDown />
+              </div>
+            </div>
+          </div>
         </div>
-        <section className="mt-16 text-center">
-          <p className="text-gray-400 mb-6">
-            Ready to start your fitness journey? Click the button below.
-          </p>
-          <button className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">
-            Get Started
-          </button>
-        </section>
+      </div>
+      <div class=" bg-gray-900">
+        <div class="text-3xl font-home font-semibold text-white flex items-center justify-center pt-10">
+          Our services
+        </div>
+        <div class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center mt-8 mx-6 pb-6">
+          <div class="text-gray-200 bg-gray-950 rounded-lg p-4 border-4 border-gray-400">
+            <h3 class="text-lg font-semibold items-center justify-center flex">
+              Workouts
+            </h3>
+            <div className="flex items-center justify-center py-2">
+              <IoIosBody size={60} />
+            </div>
+            <p className="text-sm text-justify">
+              We provide you with the best suited workouts possible for each
+              day, giving you different variety of exercises so that you are
+              never bored of taking care of yourself anytime soon!
+            </p>
+          </div>
+          {/* Diet Card */}
+          <div class="text-gray-200 bg-gray-950 rounded-lg p-4 border-4 border-gray-400">
+            <h3 class="text-lg font-semibold items-center justify-center flex">Diet</h3>
+            <div className="flex items-center justify-center py-2">
+              <PiBowlFoodFill size={60} />
+            </div>
+            <p className="text-sm text-justify">
+              Personalized diet plans tailored to your goals and needs. Whether
+              you're looking to lose weight, gain muscle, or improve your
+              overall health, our nutritionists will create a customized plan
+              just for you.
+            </p>
+          </div>
+          {/* Yoga Card */}
+          <div class="text-gray-200 bg-gray-950 rounded-lg p-4 border-4 border-gray-400">
+            <h3 class="text-lg font-semibold items-center justify-center flex">Yoga</h3>
+            <div className="flex items-center justify-center py-2">
+              <GrYoga size={60} />
+            </div>
+            <p className="text-sm text-justify">
+              Experience the rejuvenating benefits of yoga with our expert
+              instructors. From Vinyasa flow to Ashtanga, we offer a variety of
+              classes suitable for all levels. Strengthen your body, calm your
+              mind, and find balance in your life with our yoga sessions.
+            </p>
+          </div>
+          {/* Analytics Card */}
+          <div class="text-gray-200 bg-gray-950 rounded-lg p-4 border-4 border-gray-400">
+            <h3 class="text-lg font-semibold items-center justify-center flex">Analytics</h3>
+            <div className="flex items-center justify-center py-2">
+              <TbDeviceAnalytics size={60} />
+            </div>
+            <p className="text-sm text-justify">
+              Track your progress and optimize your fitness journey with our
+              advanced analytics tools. Gain insights into your workouts, diet,
+              sleep patterns, and more to make informed decisions and achieve
+              your health and fitness goals faster.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
